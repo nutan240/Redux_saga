@@ -18,9 +18,11 @@ const store = configureStore({
 });
 saga.run(watchFetchUsers) ;
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
+ 
     <React.StrictMode>
+     <Provider store={store}>
       <App />
+      </Provider>
     </React.StrictMode>
-  </Provider>
+ 
 );

@@ -20,16 +20,16 @@ const UserList = () => {
   };
 
   return (
-    <div>
-      <h1>User List</h1>
+    <div style={{ overflow:'auto' , width:'99%' , color:'white' , margin:'auto'}}>
+      <h1>Cat Breeds List</h1>
       <button onClick={fetchapi}>api </button>
-      <div>
+      <div style={{  overflow:'auto' , display:'flex' , flexWrap:'wrap' , gap:'3px', width:'99%' , color:'white' , margin:'auto' }}>
         {users.map((user) => (
-          <div>
-            <h4 key={user.id}>{user.id}</h4>
-            <h4 key={user.id}>{user.cfa_url}</h4>
-            <h4 key={user.id}>{user.name}</h4>
-            <h4 key={user.id}>description :{user.description}</h4>
+          <div style={{   width:'450px' ,border:'1px solid white' ,padding:'14px' }}>
+            <h4 key={user.id}>ID : {user.id}</h4>
+            <h4  style={{   width:'200px' , }} key={user.id}> {user.cfa_url}</h4>
+            <h4 key={user.id}>NAME : {user.name}</h4>
+            <h4 key={user.id}>description : {user.description}</h4>
           </div>
         ))}
       </div>
